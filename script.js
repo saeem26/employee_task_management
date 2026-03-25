@@ -8,7 +8,7 @@ function login() {
         // Smooth transition
         document.body.style.opacity = "0";
         setTimeout(() => {
-            window.location.href = "dashboard.html";
+            window.location.href = "add_employee.html";
         }, 300);
     } else {
         message.textContent = "Invalid username or password";

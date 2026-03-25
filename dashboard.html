@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<h1>Employee Task Dashboard</h1>
+<a href="login.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: #667eea; font-weight: bold;">Logout</a>
+
+<div class="container">
+
+    <div class="task-box">
+        <h3>Add Task</h3>
+        <input type="text" id="taskInput" placeholder="Enter Task">
+        <input type="text" id="employeeInput" placeholder="Assign to Employee" list="employees">
+        <datalist id="employees">
+        </datalist>
+        <button onclick="addTask()">Add Task</button>
+        <div id="taskMessage" style="margin-top: 10px; display: none;"></div>
+    </div>
+
+    <div class="task-list">
+        <h3>Tasks</h3>
+        <ul id="taskList"></ul>
+    </div>
+
+    <div class="employee-box">
+        <h3>Employees</h3>
+        <ul id="employeeList"></ul>
+    </div>
+
+    <div class="employee-box">
+        <h3>Manage Employees</h3>
+        <input type="text" id="newEmployeeInput" placeholder="Employee Name">
+        <button onclick="addEmployee()">Add Employee</button>
+        <div id="employeeMessage" style="margin-top: 10px; display: none;"></div>
+        <h4 style="margin-top: 20px; color: #667eea;">Remove Employee</h4>
+        <select id="removeEmployeeSelect" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;">
+            <option value="">Select employee to remove</option>
+        </select>
+        <button onclick="removeEmployee()" style="background: #dc3545;">Remove Employee</button>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
